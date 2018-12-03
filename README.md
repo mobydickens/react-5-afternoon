@@ -12,11 +12,11 @@ During this project, we'll be improving on a web application that walks users th
 
 ## Setup
 
-* `fork` and `clone` this repository.
+<!-- * `fork` and `clone` this repository.
 * `cd` into the project directory.
 * Run `npm i` to install current dependencies.
 * Run `npm i react-redux redux react-router-dom`
-* Run `npm start` ( The app should intentionally not compile correctly ).
+* Run `npm start` ( The app should intentionally not compile correctly ). -->
 
 ## Step 1
 
@@ -27,11 +27,11 @@ When using redux, the store holds the entire state of our application. So it's i
 
 ### Instructions
 
-* Create a new file in your `src` folder called `store.js`
-* Open `src/store.js`.
-* Import `createStore` from `redux`.
-* Import `reducer.js` from `src/ducks/reducer.js`.
-* Export `createStore` by default and pass it reducer as it's argument
+<!-- * Create a new file in your `src` folder called `store.js` -->
+<!-- * Open `src/store.js`. -->
+<!-- * Import `createStore` from `redux`. -->
+<!-- * Import `reducer.js` from `src/ducks/reducer.js`. -->
+<!-- * Export `createStore` by default and pass it reducer as it's argument -->
 
 <details>
 
@@ -89,13 +89,13 @@ In this step, we will take our store created from the previous step and hook it 
 
 ### Instructions
 
-* Open `src/index.js`.
-* Import `store` from `src/store.js`.
-* Import `Provider` from `react-redux`.
-  * The `Provider` component should have a `store` prop that equals `store` (remember how we reference variables in jsx). 
-* Open `src/App.js`.
-* Import `HashRouter` from `react-router-dom`.
-* Wrap the `router` invocation in `<HashRouter>` tags.
+<!-- * Open `src/index.js`. -->
+<!-- * Import `store` from `src/store.js`. -->
+<!-- * Import `Provider` from `react-redux`. -->
+  <!-- * The `Provider` component should have a `store` prop that equals `store` (remember how we reference variables in jsx).  -->
+<!-- * Open `src/App.js`. -->
+<!-- * Import `HashRouter` from `react-router-dom`. -->
+<!-- * Wrap the `router` invocation in `<HashRouter>` tags. -->
 
 <details>
 
@@ -211,11 +211,11 @@ In this step, we are going to clean up the mess.
 
 ### Instructions
 
-* Open `src/router.js`.
-* Instead of exporting a function, let's remove the function and simply export the chunk of JSX that was returned by the function.
-  * You will start getting errors coming from the props on the routes rendered elements once our routing is no longer a function, this is because they're no longer receiving information via parameters from the function and are now undefined.
-* For each individual route, instead of using render, we will be using component. 
-  * A route should look like the following: `<Route component={ theComponent }  path='/thePath'/>`
+<!-- * Open `src/router.js`. -->
+<!-- * Instead of exporting a function, let's remove the function and simply export the chunk of JSX that was returned by the function. -->
+  <!-- * You will start getting errors coming from the props on the routes rendered elements once our routing is no longer a function, this is because they're no longer receiving information via parameters from the function and are now undefined. -->
+<!-- * For each individual route, instead of using render, we will be using component.  -->
+  <!-- * A route should look like the following: `<Route component={ theComponent }  path='/thePath'/>` -->
 
 <br />
 
@@ -460,10 +460,10 @@ In this step, we'll be removing the state and handler methods from `App.js`. Tha
 
 ### Instructions
 
-* Open `src/App.js`.
-* In the App component, delete the constructor and state.
-* Delete all the handler methods.
-* In the return statement of `render()`, delete everything but the `div` with the router.
+<!-- * Open `src/App.js`. -->
+<!-- * In the App component, delete the constructor and state. -->
+<!-- * Delete all the handler methods. -->
+<!-- * In the return statement of `render()`, delete everything but the `div` with the router. -->
 
 ### Solution
 
@@ -502,9 +502,9 @@ Let's begin connecting our views. We'll start with the Eleventh view. I chose th
 
 ### Instructions 
 
-* Open `src/components/WizardEleven/WizardEleven.js`.
-* Import `connect` from `react-redux`
-* Connect the component to the `redux store`, just like we did for `src/App.js`.
+<!-- * Open `src/components/WizardEleven/WizardEleven.js`. -->
+<!-- * Import `connect` from `react-redux` -->
+<!-- * Connect the component to the `redux store`, just like we did for `src/App.js`.
   * Instead of `returning` the entire state in `mapStateToProps`, return only the properties the component needs:
     * <details>
 
@@ -530,7 +530,7 @@ Let's begin connecting our views. We'll start with the Eleventh view. I chose th
       ```
       
       </details>
-    * You may be scratching your head as to why we are using these exact propeties. When we setup the reducer later on, these will be the names of the properties the `redux` store will be managing. 
+    * You may be scratching your head as to why we are using these exact propeties. When we setup the reducer later on, these will be the names of the properties the `redux` store will be managing.  -->
 
 <details>
 
@@ -759,8 +759,8 @@ In this step, we'll start creating our store's reducer and the action creators t
 
 ### Instructions
 
-* Open `src/ducks/reducer.js`.
-* Create an `initialState` object, at the very top of the file, with the following properties:
+<!-- * Open `src/ducks/reducer.js`. -->
+<!-- * Create an `initialState` object, at the very top of the file, with the following properties:
   * <details>
   
     <summary> <code> Initial State Properties </code> </summary>
@@ -784,23 +784,23 @@ In this step, we'll start creating our store's reducer and the action creators t
     email: ''
     ```
     
-    </details>
-* Modify the `reducer` function to have a state and action parameter. 
-  * The `state` parameter should default to `initialState`.
-* Create two action types in between `initialState` and the `reducer` function.
-  * The first action type should equal: `"UPDATE_LOAN_TYPE"`.
-  * The second action type should equal: `"UPDATE_PROPERTY_TYPE"`.
-* Create two action creators in between the `reducer` function and the `export default` statement.
-  * The first action creator should have a type of `UPDATE_LOAN_TYPE`.
-    * This action creator should have a parameter called `loanType`.
-    * This action creator should have a payload that equals `loanType`.
-  * The second action creator should have a type of `UPDATE_PROPERTY_TYPE`.
-    * This action creator should have a parameter called `property`.
-    * This action creator should have a payload that equals `property`.
-* Modify the `reducer` function to use a `switch` statement on the `action.type`.
-  * Create a `case` for `UPDATE_LOAN_TYPE` and update state with the new loan type.
-  * Create a `case` for `UPDATE_PROPERTY_TYPE` and update state with the new property type.
-  * Create a `default case` that returns state.
+    </details> -->
+<!-- * Modify the `reducer` function to have a state and action parameter.  -->
+  <!-- * The `state` parameter should default to `initialState`. -->
+<!-- * Create two action types in between `initialState` and the `reducer` function. -->
+  <!-- * The first action type should equal: `"UPDATE_LOAN_TYPE"`. -->
+  <!-- * The second action type should equal: `"UPDATE_PROPERTY_TYPE"`. -->
+<!-- * Create two action creators in between the `reducer` function and the `export default` statement. -->
+  <!-- * The first action creator should have a type of `UPDATE_LOAN_TYPE`. -->
+    <!-- * This action creator should have a parameter called `loanType`. -->
+    <!-- * This action creator should have a payload that equals `loanType`. -->
+  <!-- * The second action creator should have a type of `UPDATE_PROPERTY_TYPE`. -->
+    <!-- * This action creator should have a parameter called `property`. -->
+    <!-- * This action creator should have a payload that equals `property`. -->
+<!-- * Modify the `reducer` function to use a `switch` statement on the `action.type`. -->
+  <!-- * Create a `case` for `UPDATE_LOAN_TYPE` and update state with the new loan type. -->
+  <!-- * Create a `case` for `UPDATE_PROPERTY_TYPE` and update state with the new property type. -->
+  <!-- * Create a `default case` that returns state. -->
 
 <details>
 
@@ -960,15 +960,15 @@ In this step, we will connect `src/components/WizardOne/WizardOne.js` to the sto
 
 ### Instructions
 
-* Open `src/components/WizardOne/WizardOne.js`.
-* Import `connect` from `react-redux`.
-* Import the `updateLoanType` and `updatePropertyType` action creators from `src/ducks/reducer.js`.
-  * Hint: Use destructuring.
-* Modify the `export default` statement to use `connect`.
-  * Use `mapStateToProps` to return the only two parts of `state` it will need.
-  * Use a second parameter on the `connect` statement that passes in the action creators.
-* Modify the two `onChange` events to use the action creators.
-  * Hint: Both action creators need an argument.
+<!-- * Open `src/components/WizardOne/WizardOne.js`. -->
+<!-- * Import `connect` from `react-redux`. -->
+<!-- * Import the `updateLoanType` and `updatePropertyType` action creators from `src/ducks/reducer.js`. -->
+  <!-- * Hint: Use destructuring. -->
+<!-- * Modify the `export default` statement to use `connect`. -->
+  <!-- * Use `mapStateToProps` to return the only two parts of `state` it will need. -->
+  <!-- * Use a second parameter on the `connect` statement that passes in the action creators. -->
+<!-- * Modify the two `onChange` events to use the action creators. -->
+  <!-- * Hint: Both action creators need an argument. -->
 
 <details>
 
@@ -1099,20 +1099,20 @@ In this step, we will update the reducer to handle modifying the city on state. 
 
 ### Instructions 
 
-* Open `src/ducks/reducer.js`.
-* Create an action type for `UPDATE_CITY`.
-* Create an action creator called `updateCity`.
-  * This action creator should use a parameter called `city`.
-* Add an `UPDATE_CITY` case to the reducer that updates `city`.
-  * Remember to keep state immutable. 
-* Open `src/components/WizardTwo/WizardTwo.js`.
-* Import `connect` from `react-redux`.
-* Import `updateCity` from `src/ducks/reducer.js`.
-* Modify the `export default` statement to use connect.
-  * `mapStateToProps` should only return one property from state.
-  * `updateCity` should be passed in as a second parameter.
-* Modify the `onChange` event to call `updateCity`.
-  * Remember this action creator has one parameter.
+<!-- * Open `src/ducks/reducer.js`. -->
+<!-- * Create an action type for `UPDATE_CITY`. -->
+<!-- * Create an action creator called `updateCity`. -->
+  <!-- * This action creator should use a parameter called `city`. -->
+<!-- * Add an `UPDATE_CITY` case to the reducer that updates `city`. -->
+  <!-- * Remember to keep state immutable.  -->
+<!-- * Open `src/components/WizardTwo/WizardTwo.js`. -->
+<!-- * Import `connect` from `react-redux`. -->
+<!-- * Import `updateCity` from `src/ducks/reducer.js`. -->
+<!-- * Modify the `export default` statement to use connect. -->
+  <!-- * `mapStateToProps` should only return one property from state. -->
+  <!-- * `updateCity` should be passed in as a second parameter. -->
+<!-- * Modify the `onChange` event to call `updateCity`. -->
+  <!-- * Remember this action creator has one parameter. -->
 
 <details>
 
@@ -1304,20 +1304,20 @@ In this step, we will update the reducer to handle modifying the `propToBeUsedOn
 
 ### Instructions
 
-* Open `src/ducks/reducer.js`.
-* Create an action type for `UPDATE_PROP`.
-* Create an action creator called `updateProp`.
-  * This action creator should use a parameter called `prop`.
-* Add an `UPDATE_PROP` case to the reducer that updates `propToBeUsedOn`.
-  * Remember to keep state immutable. 
-* Open `src/components/WizardThree/WizardThree.js`.
-* Import `connect` from `react-redux`.
-* Import `updateProp` from `src/ducks/reducer.js`.
-* Modify the `export default` statement to use connect.
-  * `mapStateToProps` should only return one property from state.
-  * `updateProp` should be passed in as a second parameter.
-* Modify the `onClick` events to call `updateProp`.
-  * Remember this action creator has one parameter.
+<!-- * Open `src/ducks/reducer.js`. -->
+<!-- * Create an action type for `UPDATE_PROP`. -->
+<!-- * Create an action creator called `updateProp`. -->
+  <!-- * This action creator should use a parameter called `prop`. -->
+<!-- * Add an `UPDATE_PROP` case to the reducer that updates `propToBeUsedOn`. -->
+  <!-- * Remember to keep state immutale.  -->
+<!-- * Open `src/components/WizardThree/WizardThree.js`. -->
+<!-- * Import `connect` from `react-redux`. -->
+<!-- * Import `updateProp` from `src/ducks/reducer.js`. -->
+<!-- * Modify the `export default` statement to use connect. -->
+  <!-- * `mapStateToProps` should only return one property from state. -->
+  <!-- * `updateProp` should be passed in as a second parameter. -->
+<!-- * Modify the `onClick` events to call `updateProp`. -->
+  <!-- * Remember this action creator has one parameter. -->
 
 <details>
 
@@ -1533,20 +1533,20 @@ In this step, we will update the reducer to handle modifying the `found` on stat
 
 ### Instructions 
 
-* Open `src/ducks/reducer.js`.
-* Create an action type for `UPDATE_FOUND`.
-* Create an action creator called `updateFound`.
-  * This action creator should use a parameter called `found`.
-* Add an `UPDATE_FOUND` case to the reducer that updates `found`.
-  * Remember to keep state immutable. 
-* Open `src/components/WizardFour/WizardFour.js`.
-* Import `connect` from `react-redux`.
-* Import `updateFound` from `src/ducks/reducer.js`.
-* Modify the `export default` statement to use connect.
-  * `mapStateToProps` should only return one property from state.
-  * `updateFound` should be passed in as a second parameter.
-* Modify the `onClick` events to call `updateFound`.
-  * Remember this action creator has one parameter.
+<!-- * Open `src/ducks/reducer.js`. -->
+<!-- * Create an action type for `UPDATE_FOUND`. -->
+<!-- * Create an action creator called `updateFound`. -->
+  <!-- * This action creator should use a parameter called `found`. -->
+<!-- * Add an `UPDATE_FOUND` case to the reducer that updates `found`. -->
+  <!-- * Remember to keep state immutable.  -->
+<!-- * Open `src/components/WizardFour/WizardFour.js`. -->
+<!-- * Import `connect` from `react-redux`. -->
+<!-- * Import `updateFound` from `src/duc/ks/reducer.js`. -->
+<!-- * Modify the `export default` statement to use connect. -->
+  <!-- * `mapStateToProps` should only return one property from state. -->
+  <!-- * `updateFound` should be passed in as a second parameter. -->
+<!-- * Modify the `onClick` events to call `updateFound`. -->
+  <!-- * Remember this action creator has one parameter. -->
 
 <details>
 
@@ -1773,10 +1773,10 @@ In this step, we will complete the rest of the reducer for updating the remainin
 
 ### Instructions 
 
-* Open `src/ducks/reducer.js`.
-* Create an action type for updating the following state properties:
-  * `realEstateAgent`
-  * `cost`
+<!-- * Open `src/ducks/reducer.js`. -->
+<!-- * Create an action type for updating the following state properties: -->
+  <!-- * `realEstateAgent` -->
+  <!-- * `cost`
   * `downPayment`
   * `credit`
   * `history`
@@ -1785,11 +1785,11 @@ In this step, we will complete the rest of the reducer for updating the remainin
   * `addressThree`
   * `firstName`
   * `lastName`
-  * `email`
-* Create an action creator for each property listed above.
-* Update the reducer to have a case for each new action type.
-  * The case should update state with the value on the payload.
-  * Remember to keep state immutable.
+  * `email` -->
+<!-- * Create an action creator for each property listed above. -->
+<!-- * Update the reducer to have a case for each new action type. -->
+  <!-- * The case should update state with the value on the payload. -->
+  <!-- * Remember to keep state immutable. -->
 
 ### Solution
 
